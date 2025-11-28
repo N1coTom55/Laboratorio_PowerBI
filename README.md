@@ -7,7 +7,7 @@ Análisis de Ventas de un e‑commerce internacional (2022–2024). Proyecto pr�
 ## Información principal
 
 - **Autor:** Tomadín Nicolás Adrián
-- **Fecha:** 04/12/2025
+- **Fecha de Entrega:** 04/12/2025
 - **Herramienta:** Microsoft Power BI Desktop
 
 ## Resumen
