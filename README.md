@@ -86,10 +86,7 @@ Visualización:
 - Total Órdenes
 - Ticket Promedio
 - Ventas Año Anterior (Time Intelligence)
-- Crecimiento YoY (%)
-- Clientes Únicos
-- % Cumplimiento Objetivo
-- Margen Estimado
+- Porcentaje
 
 
 ### Visuales incluidos
@@ -116,7 +113,6 @@ Visualización:
 - Órdenes completadas
 - Ticket promedio
 - Crecimiento anual (YoY %)
-- Clientes activos (únicos)
 
 🔍 Análisis Disponibles
 Evolución temporal de ventas (mensual)
