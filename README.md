@@ -1,120 +1,73 @@
-📊 Laboratorio de Análisis de Datos con Power BI
-Análisis de Ventas de E-Commerce Internacional (2022-2024)
-👨‍💻 Información del Proyecto
-Autor: Tomadín Nicolás Adrián
+# Laboratorio de Análisis de Ventas — Power BI
 
-Fecha: 04/12/2025
+Análisis de Ventas de un e‑commerce internacional (2022–2024). Proyecto práctico creado con Microsoft Power BI Desktop que incluye extracción/transformación de datos (ETL), modelado dimensional, medidas DAX y un dashboard interactivo.
 
-Herramienta: Microsoft Power BI Desktop
+---
 
-Versión: Power BI Desktop (última versión disponible)
+## Información principal
 
-📁 Estructura del Proyecto
-text
-Laboratorio_PowerBI/
-├── Dashboard_Final.pbix                 # Archivo principal de Power BI
-├── Documentacion_ETL_Modelo.pdf         # Documentación técnica del proyecto
-├── README.md                            # Este archivo
-└── data/
-    ├── Productos.xlsx                   # Catálogo de 100 productos
-    ├── Clientes.xlsx                    # Base de ~250 clientes
-    └── Ventas.xlsx                      # Transacciones 2022-2024 (300-500 registros)
-🎯 Descripción del Proyecto
-Este laboratorio implementa un análisis completo de ventas para un marketplace internacional de e-commerce, utilizando Power BI Desktop para transformar, modelar y visualizar datos de negocio.
+- **Autor:** Tomadín Nicolás Adrián
+- **Fecha:** 04/12/2025
+- **Herramienta:** Microsoft Power BI Desktop
 
-Objetivo
-Crear un dashboard interactivo que permita analizar el rendimiento de ventas, tendencias temporales, distribución geográfica y comportamiento de clientes para facilitar la toma de decisiones estratégicas.
+## Resumen
+Este laboratorio muestra un flujo completo de análisis: ingesta y limpieza de datos, modelado en estrella, creación de medidas DAX y diseño de visualizaciones para apoyar decisiones comerciales. El dashboard permite explorar ventas por tiempo, países, categorías y productos.
 
-📊 Alcance del Análisis
-Período analizado: Enero 2022 - Diciembre 2024
 
-Volumen de datos: 100 productos, 250 clientes, 300-500 transacciones
+## Alcance
 
-Cobertura geográfica: 10 países (América, Europa)
+- **Periodo:** Enero 2022 — Diciembre 2024
+- **Volumen aproximado:** 100 productos, 250 clientes, 300–500 transacciones
+- **Cobertura geográfica:** ~10 países (América, Europa)
+- **Categorías de producto:** 10
 
-Categorías: 10 categorías de productos
+## Requisitos
 
-⚙️ Requisitos Técnicos
-Software Necesario
-✅ Microsoft Power BI Desktop (versión gratuita)
+- Microsoft Power BI Desktop (versión gratuita). Descarga: https://powerbi.microsoft.com/desktop/
+- Windows 10 o superior (recomendado)
+- 4–8 GB RAM mínimo / 1 GB de espacio libre
 
-🔗 Descarga: https://powerbi.microsoft.com/desktop/
-
-Sistema Recomendado
-✅ Windows 10 o superior
-
-✅ 8 GB RAM (mínimo 4 GB)
-
-✅ 1 GB de espacio libre en disco
-
-Archivos Requeridos
-✅ Los 3 archivos Excel deben estar en la carpeta data/
-
-✅ Mantener la estructura de carpetas para conexiones correctas
+Datos: coloca los archivos Excel en la carpeta `data/` con la estructura original para que Power BI encuentre las fuentes (o actualiza las rutas en el proyecto `.pbix`).
 
 🚀 Instrucciones de Uso
-Paso 1: Abrir el Proyecto
-Asegúrate de tener Power BI Desktop instalado
 
-Haz doble clic en Dashboard_Final.pbix
+## Uso rápido — Abrir y explorar
 
-Si aparece mensaje de seguridad, haz clic en "Permitir"
+1. Abre Power BI Desktop.
+2. Abre `Dashboard_Final.pbix` (doble clic o Archivo → Abrir).
+3. Si Power BI solicita permisos para conexión, acepta para cargar datos locales.
 
-Paso 2: Actualizar Datos (si es necesario)
-En Power BI, ve a la pestaña "Inicio"
+Actualizar datos: Inicio → Actualizar. Si hay errores por rutas, ve a Transformar datos → Configuración de origen y corrige las rutas locales.
 
-Haz clic en "Actualizar" para recargar datos
+### Interacción
 
-Si hay errores de ruta:
+- Usa los segmentadores (Año, Categoría, País) para filtrar el dashboard.
+- Haz clic en cualquier visual para aplicar filtrado cruzado.
+- Pasa el cursor sobre elementos para ver tooltips con detalles.
 
-Ve a "Transformar datos" → "Configuración de origen"
+## Modelo de datos y medidas
 
-Actualiza las rutas según tu ubicación local
+En la vista Modelo se implementa un esquema en estrella con las relaciones principales entre la tabla de hechos `Ventas` y las dimensiones (`Productos`, `Clientes`, `Calendario`, `Objetivos`).
 
-Paso 3: Interactuar con el Dashboard
-🎛️ Usa los segmentadores en el panel para filtrar por:
-
-Año (2022, 2023, 2024)
-
-Categoría de Producto
-
-País
-
-🔄 Haz clic en cualquier gráfico para filtrado cruzado
-
-ℹ️ Pasa el cursor para ver tooltips informativos
-
-Paso 4: Explorar el Modelo de Datos
-Haz clic en el icono "Modelo" en el panel lateral
-
-Visualiza el esquema estrella implementado
-
-Verifica las 4 relaciones principales:
-
-Ventas → Productos (por Código Producto)
-
-Ventas → Clientes (por ID Cliente)
-
-Ventas → Calendario (por Fecha)
-
-Calendario → Objetivos (por Año)
-
-Paso 5: Revisar Medidas DAX
-En el panel "Campos", expande la tabla _Medidas
-
-Haz clic derecho en cualquier medida → "Editar medida"
-
-Revisa el código DAX implementado
+Revisa las medidas DAX desde el panel Campos → tabla `Medidas` para entender las definiciones (Ventas Totales, Ticket Promedio, YoY, etc.).
 
 🛠️ Componentes Técnicos Implementados
-🔄 ETL y Transformación de Datos
-✅ 4 fuentes de datos distintas conectadas
+## ETL, modelado y visualización
 
-✅ 3+ transformaciones significativas en Power Query
+ETL y Power Query:
 
-✅ Limpieza y validación de tipos de datos
+- Conexión a archivos Excel (datos de productos, clientes y ventas).
+- Limpieza, normalización y validación de tipos.
+- Eliminación de duplicados y registros inválidos.
 
-✅ Eliminación de duplicados y registros cancelados
+Modelado:
+
+- Esquema estrella con tabla de hechos `Ventas` y dimensiones.
+- Tabla Calendario creada y marcada como tabla de fechas.
+
+Visualización:
+
+- Dashboard con KPIs, mapas, series temporales, ranking por productos y segmentadores interactivos.
 
 🗃️ Modelado de Datos
 ✅ Esquema Estrella implementado
@@ -127,43 +80,26 @@ Revisa el código DAX implementado
 
 ✅ Tabla Calendario creada con DAX y marcada como tabla de fechas
 
-📐 Cálculos y Medidas DAX
-✅ 8 medidas explícitas creadas:
 
-Ventas Totales
+### Medidas DAX (ejemplos)
+- Ventas Totales
+- Total Órdenes
+- Ticket Promedio
+- Ventas Año Anterior (Time Intelligence)
+- Crecimiento YoY (%)
+- Clientes Únicos
+- % Cumplimiento Objetivo
+- Margen Estimado
 
-Total Órdenes
 
-Ticket Promedio
+### Visuales incluidos
 
-Ventas Año Anterior (Time Intelligence)
-
-Crecimiento YoY %
-
-Clientes Únicos
-
-% Cumplimiento Objetivo
-
-Margen Estimado
-
-📊 Visualización y Dashboard
-✅ 7 objetos visuales distintos
-
-✅ 5 tarjetas KPI en panel superior
-
-✅ 🌍 Mapa geográfico (distribución por país) - OBLIGATORIO
-
-✅ Gráfico de líneas (tendencia temporal)
-
-✅ Gráfico de barras (ventas por categoría)
-
-✅ Gráfico de columnas (top 10 productos)
-
-✅ Tabla de rendimiento por vendedor
-
-✅ Gráfico de anillos (métodos de pago)
-
-✅ 3 segmentadores interactivos
+- KPIs en el encabezado (Ventas Totales, Ticket, Clientes, Crecimiento YoY)
+- Mapa por país
+- Serie temporal (línea)
+- Barras por categoría y Top 10 productos
+- Tabla de desempeño por vendedor
+- Segmentadores sincronizados
 
 🔗 Interactividad
 ✅ Filtrado cruzado entre todos los visuales
@@ -174,17 +110,13 @@ Margen Estimado
 
 ✅ Formato profesional aplicado
 
-📈 Indicadores Clave (KPIs) Visualizados
-🎯 Tarjetas Principales
-💰 Ventas Totales: Ingresos totales del período seleccionado
+## KPIs principales
 
-📦 Órdenes Completadas: Cantidad total de transacciones exitosas
-
-🎫 Ticket Promedio: Valor promedio por orden
-
-📈 Crecimiento Anual: Variación % comparada con año anterior
-
-👥 Clientes Activos: Número de clientes únicos que realizaron compras
+- Ventas Totales (periodo seleccionado)
+- Órdenes completadas
+- Ticket promedio
+- Crecimiento anual (YoY %)
+- Clientes activos (únicos)
 
 🔍 Análisis Disponibles
 Evolución temporal de ventas (mensual)
@@ -199,52 +131,58 @@ Performance por vendedor
 
 Distribución de métodos de pago
 
-💾 Datos Técnicos del Modelo
-📋 Tablas
-Ventas (Tabla de Hechos): ~300-500 registros
 
-Productos (Dimensión): 100 registros
+## Estructura de archivos
 
-Clientes (Dimensión): ~250 registros
+Laboratorio_PowerBI/
 
-Calendario (Dimensión): 1,096 días (2022-2024)
+- `Dashboard_Final.pbix` — archivo principal de Power BI (modelo + visualizaciones).
+- `Documentacion_ETL_Modelo.pdf` — documentación técnica de ETL y modelo.
+- `data/` — carpeta con archivos fuente:
+    - `Productos.xlsx` — catálogo de ~100 productos.
+    - `Clientes.xlsx` — ~250 registros de clientes.
+    - `Ventas.xlsx` — transacciones (2022–2024, ~300–500 filas en este dataset de ejemplo).
 
-Objetivos (Dimensión): 3 registros (un objetivo por año)
 
-_Medidas (Tabla organizadora): 8 medidas DAX
+Relaciones principales:
 
-🔗 Relaciones
-Ventas[Código Producto] → Productos[Código Producto] (*:1)
-
-Ventas[ID Cliente] → Clientes[ID Cliente] (*:1)
-
-Ventas[Fecha] → Calendario[Date] (*:1)
-
-Calendario[Año] → Objetivos[Año] (*:1)
+- `Ventas[Código Producto] → Productos[Código Producto]` (*:1)
+- `Ventas[ID Cliente] → Clientes[ID Cliente]` (*:1)
+- `Ventas[Fecha] → Calendario[Date]` (*:1)
+- `Calendario[Año] → Objetivos[Año]` (*:1)
 
 📦 Tamaño del Archivo
 Dashboard_Final.pbix: ~5-10 MB (aproximado)
 
-🛠️ Solución de Problemas Comunes
-Problema	Solución
-"No se puede cargar el archivo"	Verifica que tengas Power BI Desktop instalado y actualizado
-"Error al conectar a los archivos Excel"	Ve a Transformar datos → Configuración de origen de datos y actualiza rutas
-"Los visuales no muestran datos"	Haz clic en Actualizar y verifica ubicación de archivos Excel
-"Time Intelligence no funciona"	En vista Modelo, selecciona tabla Calendario → Marcar como tabla de fechas
-"Dashboard lento"	Cierra otras aplicaciones o reduce registros en Ventas.xlsx
-✅ Criterios de Evaluación Cubiertos
-Criterio	Peso	Estado	Detalles
-Modelado de Datos	30%	✅ COMPLETO	Esquema estrella, 4 relaciones, tabla de fechas
-Transformación ETL	25%	✅ COMPLETO	4 fuentes, 3+ transformaciones, datos limpios
-Medidas DAX	20%	✅ EXCEDIDO	8 medidas (mínimo 3), Time Intelligence
-Diseño y Visualización	15%	✅ EXCEDIDO	7 visuales, mapa, 3 segmentadores, diseño profesional
-Documentación	10%	✅ COMPLETO	PDF detallado, proceso ETL, estructura modelo
-📞 Contacto y Soporte
-Autor: Tomadín Nicolás Adrián
-📧 Email: nicolas.tomadin1995@gmail.com
-📅 Fecha de Entrega: 04/12/2025
 
-📚 Documentación adicional: Consulta el archivo "Documentacion_ETL_Modelo.pdf" para información detallada sobre el proceso de transformación y diseño del modelo.
+## Solución de problemas comunes
+
+- "No se puede cargar el archivo": verifica que Power BI Desktop esté instalado y actualizado.
+- "Error al conectar a archivos Excel": Transformar datos → Configuración de origen → actualizar rutas.
+- "Los visuales no muestran datos": haz clic en Actualizar y comprueba la ubicación de los archivos.
+- "Time Intelligence no funciona": marca la tabla `Calendario` como tabla de fechas en la vista Modelo.
+- "Dashboard lento": cierra otras aplicaciones o reduce el volumen de datos de ejemplo.
+## Estado y criterios de evaluación
+
+Este proyecto cumple los criterios de evaluación del laboratorio: modelado en estrella, transformaciones ETL documentadas, medidas DAX y un dashboard interactivo con visuales y segmentadores.
+
+## Contacto
+
+**Autor:** Tomadín Nicolás Adrián — nicolas.tomadin1995@gmail.com
+
+## Documentación adicional
+
+Consulta `Documentacion_ETL_Modelo.pdf` para detalles técnicos del proceso ETL y del diseño del modelo.
+
+---
+
+Si quieres, puedo:
+
+- Añadir una sección de instrucciones para extraer/transformar datos fuera de Power BI.
+- Generar un pequeño script de ejemplo para convertir los datos fuente en CSV.
+- Crear un checklist de evaluación o pruebas unitarias (donde aplique).
+
+Si prefieres que mantenga una versión en inglés o que agregue imágenes y capturas del dashboard, dime y lo preparo.
 
 💡 Notas Finales
 Este proyecto cumple y excede todos los requisitos establecidos en la consigna del laboratorio. Se implementaron las mejores prácticas de modelado dimensional, transformación de datos y visualización para crear un dashboard profesional utilizable para análisis de negocio real.
@@ -252,3 +190,17 @@ Este proyecto cumple y excede todos los requisitos establecidos en la consigna d
 El modelo está optimizado para rendimiento y escalabilidad, permitiendo agregar más datos históricos o nuevas dimensiones de análisis sin modificar la estructura base.
 
 Todas las medidas DAX están documentadas y organizadas en una tabla específica para facilitar su mantenimiento y reutilización.
+
+## Contribuciones
+
+Si quieres colaborar en este laboratorio (añadiendo datasets, mejoras en el modelo o nuevas visualizaciones), abre un issue o envía un pull request describiendo tu propuesta.
+
+Buenas prácticas para contribuir:
+
+- Usa ramas con nombres descriptivos (feature/xxx, fix/yyy).
+- Incluye una descripción clara del cambio y, si aplica, evidencia visual (capturas o gifs).
+- Mantén compatibilidad con la estructura `data/` o documenta cualquier cambio de ruta.
+
+## Licencia
+
+Este repositorio no incluye una licencia explícita en este momento. Si quieres que el proyecto sea reutilizable por otros, te recomiendo añadir una licencia (por ejemplo MIT, Apache-2.0). Dime cuál prefieres y la agrego.
