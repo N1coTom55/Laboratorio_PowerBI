@@ -1,17 +1,43 @@
-# Laboratorio de Análisis de Ventas — Power BI
 
-Análisis de Ventas de un e‑commerce internacional (2022–2024). Proyecto práctico creado con Microsoft Power BI Desktop que incluye extracción/transformación de datos (ETL), modelado dimensional, medidas DAX y un dashboard interactivo.
+# 📊 Laboratorio de Análisis de Ventas — Power BI
+
+![Power BI](https://img.shields.io/badge/Tool-Power%20BI-blue.svg) ![Estado](https://img.shields.io/badge/Estado-Completo-green.svg) ![Autor](https://img.shields.io/badge/Autor-Tomad%C3%ADn%20Nicol%C3%A1s-orange.svg)
+
+Análisis de ventas de un e‑commerce internacional (2022–2024). Proyecto desarrollado con Microsoft Power BI Desktop: ETL, modelado dimensional, medidas DAX y dashboard interactivo.
 
 ---
 
-## Información principal
+## 📋 Tabla de contenido
 
-- **Autor:** Tomadín Nicolás Adrián
-- **Fecha de Entrega:** 04/12/2025
-- **Herramienta:** Microsoft Power BI Desktop
+- [📊 Laboratorio de Análisis de Ventas — Power BI](#-laboratorio-de-análisis-de-ventas--power-bi)
+  - [📋 Tabla de contenido](#-tabla-de-contenido)
+  - [⚡ Resumen rápido](#-resumen-rápido)
+  - [Alcance](#alcance)
+  - [Requisitos](#requisitos)
+  - [Uso rápido — Abrir y explorar](#uso-rápido--abrir-y-explorar)
+    - [Interacción](#interacción)
+  - [🖼 Capturas (ejemplo)](#-capturas-ejemplo)
+  - [Modelo de datos y medidas](#modelo-de-datos-y-medidas)
+  - [ETL, modelado y visualización](#etl-modelado-y-visualización)
+  - [✅ Cómo contribuir](#-cómo-contribuir)
+    - [Medidas DAX (ejemplos)](#medidas-dax-ejemplos)
+    - [Visuales incluidos](#visuales-incluidos)
+  - [KPIs principales](#kpis-principales)
+  - [Estructura de archivos](#estructura-de-archivos)
+  - [Solución de problemas comunes](#solución-de-problemas-comunes)
+  - [Estado y criterios de evaluación](#estado-y-criterios-de-evaluación)
+  - [Contacto](#contacto)
+  - [Documentación adicional](#documentación-adicional)
+  - [Contribuciones](#contribuciones)
+  - [Licencia](#licencia)
 
-## Resumen
-Este laboratorio muestra un flujo completo de análisis: ingesta y limpieza de datos, modelado en estrella, creación de medidas DAX y diseño de visualizaciones para apoyar decisiones comerciales. El dashboard permite explorar ventas por tiempo, países, categorías y productos.
+---
+
+## ⚡ Resumen rápido
+
+Abre `Dashboard_Final.pbix` con Power BI Desktop y explora los KPIs principales: Ventas Totales, Ticket Promedio, Crecimiento YoY y distribución por país y categoría. Usa los segmentadores para filtrar por año, país y categoría.
+
+Pulsa "Actualizar" si modificas los archivos en `data/`.
 
 
 ## Alcance
@@ -45,6 +71,16 @@ Actualizar datos: Inicio → Actualizar. Si hay errores por rutas, ve a Transfor
 - Haz clic en cualquier visual para aplicar filtrado cruzado.
 - Pasa el cursor sobre elementos para ver tooltips con detalles.
 
+---
+
+## 🖼 Capturas (ejemplo)
+
+Si quieres, puedes añadir capturas o GIFs del dashboard para mejorar la presentación. A modo de ejemplo, si colocas una imagen en `data/screenshot.png`, la puedes mostrar así:
+
+![Captura de ejemplo](data/screenshot.png)
+
+> Nota: ahora mismo no hay imágenes en el repositorio — si quieres que añada una captura de ejemplo, súbela y la enlazo.
+
 ## Modelo de datos y medidas
 
 En la vista Modelo se implementa un esquema en estrella con las relaciones principales entre la tabla de hechos `Ventas` y las dimensiones (`Productos`, `Clientes`, `Calendario`, `Objetivos`).
@@ -68,6 +104,22 @@ Modelado:
 Visualización:
 
 - Dashboard con KPIs, mapas, series temporales, ranking por productos y segmentadores interactivos.
+
+---
+
+## ✅ Cómo contribuir
+
+Contribuir es bienvenido — algunas ideas de trabajo:
+
+- Mejorar o añadir visualizaciones en `Dashboard_Final.pbix`.
+- Añadir datasets reales o ampliaciones en la carpeta `data/`.
+- Documentar medidas DAX o añadir ejemplos de tests/validaciones de datos.
+
+Buenas prácticas:
+
+- Crea una rama con nombre descriptivo: `feature/tu-cambio` o `fix/descripcion`.
+- Incluye un resumen breve del cambio en el PR y captura(s) si aplica.
+- Mantén la estructura de `data/` o documenta cambios de rutas en el README.
 
 🗃️ Modelado de Datos
 ✅ Esquema Estrella implementado
@@ -169,6 +221,10 @@ Este proyecto cumple los criterios de evaluación del laboratorio: modelado en e
 ## Documentación adicional
 
 Consulta `Documentacion_ETL_Modelo.pdf` para detalles técnicos del proceso ETL y del diseño del modelo.
+
+---
+
+Si quieres, en el siguiente paso puedo añadir un archivo `LICENSE` (por ejemplo MIT) y un `README_short.md` más visual para la pantalla del repo. ¿Qué prefieres? (si quieres licencia, dime cuál: MIT/Apache-2.0/GPL-3.0/u otra)
 
 ---
 
