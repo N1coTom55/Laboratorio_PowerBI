@@ -1,17 +1,26 @@
 
-# 📊 Laboratorio de Análisis de Ventas — Power BI
+# 📊 Laboratorio individual — INFORMATORIO
 
-![Power BI](https://img.shields.io/badge/Tool-Power%20BI-blue.svg) ![Estado](https://img.shields.io/badge/Estado-Completo-green.svg) ![Autor](https://img.shields.io/badge/Autor-Tomad%C3%ADn%20Nicol%C3%A1s-orange.svg)
+**Etapa 3: Análisis de Datos — 2025**
 
-Análisis de ventas de un e‑commerce internacional (2022–2024). Proyecto desarrollado con Microsoft Power BI Desktop: ETL, modelado dimensional, medidas DAX y dashboard interactivo.
+![Power BI](https://img.shields.io/badge/Tool-Power%20BI-blue.svg) ![Estado](https://img.shields.io/badge/Estado-Completo-green.svg)
+
+Proyecto presentado individualmente para el cursillo INFORMATORIO — Etapa 3: Análisis de Datos 2025.
+Este trabajo demuestra un flujo completo de análisis de ventas para un e‑commerce internacional (periodo 2022–2024) realizado con Microsoft Power BI Desktop: ingesta y limpieza de datos (ETL), modelado dimensional, medidas DAX y un dashboard interactivo para apoyar decisiones.
 
 ---
 
 ## 📋 Tabla de contenido
 
-- [📊 Laboratorio de Análisis de Ventas — Power BI](#-laboratorio-de-análisis-de-ventas--power-bi)
+- [📊 Laboratorio individual — INFORMATORIO](#-laboratorio-individual--informatorio)
   - [📋 Tabla de contenido](#-tabla-de-contenido)
   - [⚡ Resumen rápido](#-resumen-rápido)
+  - [🎯 Objetivos del laboratorio](#-objetivos-del-laboratorio)
+  - [✍️ Resumen ejecutivo (para el profesor)](#️-resumen-ejecutivo-para-el-profesor)
+  - [📚 Metodología y notas técnicas](#-metodología-y-notas-técnicas)
+  - [✅ Entregables (para la entrega y la evaluación)](#-entregables-para-la-entrega-y-la-evaluación)
+  - [📋 Checklist sugerido para el profesor](#-checklist-sugerido-para-el-profesor)
+  - [🧾 Declaración de autoría](#-declaración-de-autoría)
   - [Alcance](#alcance)
   - [Requisitos](#requisitos)
   - [Uso rápido — Abrir y explorar](#uso-rápido--abrir-y-explorar)
@@ -38,6 +47,58 @@ Análisis de ventas de un e‑commerce internacional (2022–2024). Proyecto des
 Abre `Dashboard_Final.pbix` con Power BI Desktop y explora los KPIs principales: Ventas Totales, Ticket Promedio, Crecimiento YoY y distribución por país y categoría. Usa los segmentadores para filtrar por año, país y categoría.
 
 Pulsa "Actualizar" si modificas los archivos en `data/`.
+
+---
+
+## 🎯 Objetivos del laboratorio
+
+- Analizar series temporales de ventas (mensual) y detectar tendencias relevantes.
+- Identificar los productos y categorías que más contribuyen al ingreso.
+- Evaluar comportamiento por país y por cliente (segmentación mínima).
+- Implementar medidas DAX para KPIs y aplicar buenas prácticas de modelado dimensional.
+
+## ✍️ Resumen ejecutivo (para el profesor)
+
+El proyecto incluye un modelo en estrella diseñado para responder preguntas de negocio como: ¿cómo evolucionaron las ventas en el tiempo?, ¿qué productos y categorías generan mayor ingreso?, y ¿qué regiones muestran mejor desempeño?. El dashboard integra KPIs, mapas y segmentadores que facilitan la exploración rápida del conjunto de datos.
+
+Si lo considera conveniente, puedo añadir un apartado con capturas y valores destacados para facilitar la calificación.
+
+## 📚 Metodología y notas técnicas
+
+- Fuentes: `data/Productos.xlsx`, `data/Clientes.xlsx`, `data/Ventas.xlsx` (archivos locales Excel).
+- ETL: Power Query — limpieza de datos, tratamiento de nulos y duplicados, derivación de claves y formatos.
+- Modelado: tabla de hechos `Ventas` y dimensiones `Productos`, `Clientes`, `Calendario`, `Objetivos`.
+- Medidas: DAX para ventas totales, ticket promedio, ventas año anterior, crecimiento YoY, clientes únicos y % cumplimiento objetivo.
+
+---
+
+## ✅ Entregables (para la entrega y la evaluación)
+
+1. `Dashboard_Final.pbix` — archivo Power BI con el modelo y las visualizaciones.
+2. `Documentacion_ETL_Modelo.pdf` — informe técnico con los pasos de ETL, transformaciones y definiciones de medidas.
+3. Carpeta `data/` con los archivos fuente (`Productos.xlsx`, `Clientes.xlsx`, `Ventas.xlsx`).
+4. `README.md` — este archivo: guía, resumen y checklist para la revisión.
+
+---
+
+## 📋 Checklist sugerido para el profesor
+
+Se recomienda validar los siguientes ítems durante la corrección:
+
+- [ ] `Dashboard_Final.pbix` abre correctamente y carga los datos.
+- [ ] Orígenes de datos replicables desde `data/` o rutas documentadas.
+- [ ] Existencia de tabla de calendario y marcado como tabla de fechas.
+- [ ] Relaciones correctas y cardinalidades en el modelo.
+- [ ] Medidas DAX relevantes implementadas (ver `Documentacion_ETL_Modelo.pdf`).
+- [ ] Visualizaciones solicitadas: KPIs, mapa por país, objetos de serie temporal y ranking de productos.
+
+---
+
+## 🧾 Declaración de autoría
+
+Trabajo individual realizado por Tomadín Nicolás Adrián. Declaro que todas las tareas son de mi autoría y que las fuentes externas, en caso de haber sido consultadas, están referenciadas en la documentación técnica.
+
+---
 
 
 ## Alcance
