@@ -79,7 +79,6 @@ Si quieres, puedes añadir capturas o GIFs del dashboard para mejorar la present
 
 ![Captura de ejemplo](data/screenshot.png)
 
-> Nota: ahora mismo no hay imágenes en el repositorio — si quieres que añada una captura de ejemplo, súbela y la enlazo.
 
 ## Modelo de datos y medidas
 
